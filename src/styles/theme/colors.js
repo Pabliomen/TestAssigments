@@ -4,7 +4,7 @@ const Colors = () => {
     orange: '#F27D42',
     deepblue: '#558DCA',
     lightblue: '#96FFFF',
-    ligtherblue: '#c8EFF9',
+    lighterblue: '#c8EFF9',
     white: '#FFFFFF'
   }
 }
