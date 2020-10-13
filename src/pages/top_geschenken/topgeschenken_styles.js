@@ -64,7 +64,7 @@ export const Button = styled.div`
 
 export const Input = styled.input`
   height: 32px;
-  width: 120px;
+  width: 180px;
   padding: 0 15px;
   border: 1px solid ${({theme}) => theme.colors.darkblue};
   border-radius: 20px;
@@ -74,10 +74,39 @@ export const Input = styled.input`
   }
 `
 
+export const Label = styled.label`
+  width: 170px;
+  /* height: 32px; */
+  padding: 6px 0;
+  text-align: start;
+`
+
+export const InputWithLabelContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 350px;
+  margin-bottom: 24px;
+`
+
+export const ShowPasswordImage = styled.img`
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 16px;
+  width: 16px;
+`
+
+export const ChangePasswordContainer = styled.div`
+  height: 32px;
+  color: red;
+`
+
 export const SubmitButton = styled.button`
   height: 32px;
   padding: 0px 10px;
   margin-left: 12px;
+  margin-bottom: 32px;
   border: none;
   border-radius: 20px;
   text-align: center;
@@ -99,6 +128,10 @@ export const SubmitButton = styled.button`
 
   &:focus {
     outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 `
 

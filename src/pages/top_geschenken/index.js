@@ -6,6 +6,7 @@ import OpdrachtEen from './opdracht_een'
 import OpdrachtTwee from './opdracht_twee'
 import OpdrachtDrie from './opdracht_drie'
 import OpdrachtVier from './opdracht_vier'
+import { Link } from 'react-router-dom'
 
 class TopGeschenken extends React.Component {
   state = { currentAssignment: 1 }
@@ -40,9 +41,21 @@ class TopGeschenken extends React.Component {
             {this.assignments()}
 
           <Styled.ButtonContainer>
-            <Styled.Button onClick={this.goBackOneAssignment}>
-                Vorige opdracht
-            </Styled.Button>
+            {this.state.currentAssignment === 1
+              ? (
+                <Link to='/' style={{ textDecoration: 'none' }}>
+                  <Styled.Button onClick={this.goBackOneAssignment}>
+                    Naar Home
+                  </Styled.Button>
+                </Link>
+              )
+              : (
+                <Styled.Button onClick={this.goBackOneAssignment}>
+                  Vorige opdracht
+                </Styled.Button>
+              )
+            }
+            
             <Styled.Button onClick={this.goToNextAssignment}>
                 Volgende opdracht
             </Styled.Button>
