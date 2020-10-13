@@ -8,7 +8,7 @@ import OpdrachtDrie from './opdracht_drie'
 import OpdrachtVier from './opdracht_vier'
 
 class TopGeschenken extends React.Component {
-  state = { currentAssignment: 4 }
+  state = { currentAssignment: 1 }
 
   goToNextAssignment = () => {
     if (this.state.currentAssignment !== 4) {
